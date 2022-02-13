@@ -1,0 +1,22 @@
+{
+  "name": "sw-project-ca1-tariqh19",
+  "version": "1.0.0",
+  "description": "the Starter for the SW project CA\r this is a test",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/y2-SW-project/sw-project-ca1-TariqH19.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/y2-SW-project/sw-project-ca1-TariqH19/issues"
+  },
+  "homepage": "https://github.com/y2-SW-project/sw-project-ca1-TariqH19#readme",
+  "dependencies": {
+    "bootstrap": "^5.1.3"
+  }
+}
