@@ -18,7 +18,13 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 </head>
     <body class="antialiased">
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+   
+<section class="container-fluid p-0 m-0">			
+<div class="row text-center p-0 m-0">
+      <div class="col-12 mb-5 p-0 m-0">
+
+        <img class = "img-fluid" src="{{url('/images/homepage1.jpg')}}" alt="Image"/>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
   <div class="container-fluid">
     <a class="navbar-brand" href="#">Navbar</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -52,6 +58,16 @@
         <button class="btn btn-outline-success" type="submit">Search</button>
       </form>
     </div>
+  
+  
+  
+  
   </div>
-</nav>    </body>
+</nav>
+<img class = "img-fluid" src="{{url('/images/homepage2.jpg')}}" alt="Image"/>
+      </div>
+    </div>
+  </section>
+
+</body>
 </html>
