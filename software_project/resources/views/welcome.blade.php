@@ -1,3 +1,4 @@
+<!-- template of this page is finished need to fix spacing and layout info will be added when database is populated -->
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
     <head>
