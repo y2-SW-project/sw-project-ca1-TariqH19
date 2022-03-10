@@ -52,7 +52,15 @@ class ShoeController extends Controller
     {
         $shoes = Shoe::findOrFail($id);
         return view('user.shoes.show', [
-            'shoes' => $shoes
+            'shoe' => $shoes
+        ]);
+    }
+
+    public function bid($id)
+    {
+        $shoes = Shoe::findOrFail($id);
+        return view('user.shoes.bid', [
+            'shoe' => $shoes
         ]);
     }
 

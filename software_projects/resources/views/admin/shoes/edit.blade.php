@@ -29,7 +29,7 @@
                 <input type="text" class="form-control" id="name" name="name" value="{{ old('name', $shoe->name) }}" />
               </div>
               <div class="form-group">
-                <label for="location">price</label>
+                <labe for="location">price</labe`l>
                 <input type="text" class="form-control" id="price" name="price" value="{{ old('price', $shoe->price) }}" />
               </div>
               <div class="form-group">

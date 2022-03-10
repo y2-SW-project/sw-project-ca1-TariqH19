@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <meta name="description" content="" />
     <meta name="author" content="" />
-    <title>ALL PRODUCTS</title>
+    <title>IT'S ON THE WAY!</title>
     <!-- Favicon-->
     <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
     <!-- Bootstrap icons-->
@@ -77,42 +77,33 @@
                 </div>
             </div>
         </nav>
-
-    </div>
-    <!-- Header-->
-    <header class="bg-dark py-5">
-        <div class="container px-4 px-lg-5 my-5">
-            <div class="text-center text-white">
-                <h1 class="display-4 fw-bolder">All Products</h1>
-            </div>
-        </div>
-    </header>
-    <!-- Section-->
-    <section class="py-5">
-        <div class="container px-lg-5 mt-5">
-            <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 ">
-
-                @foreach ($shoes as $shoe)
-                <div class="card m-.25">
-                    <img class="card-img-top" src="{{ URL::to('/assets/images/'.$shoe->image) }}" alt="Card image cap">
+        <div class="container ">
+            <div class="col-lg-8 align-items-center">
+                <!-- Featured blog post-->
+                <div class="card mb-4">
+                    <a href="#!"><img class="card-img-top" src="{{ URL::to('/assets/images/'.$shoe->image) }}"
+                            alt="..." /></a>
                     <div class="card-body">
-                        <h5 class="card-title">{{$shoe->name}}</h5>
-                        <p class="card-text">{{$shoe->price}}</p>
-                        <p class="card-text">{{$shoe->shoe_condition}}</p>
-                        <a href="{{route('user.shoes.show', $shoe->id)}}" class="btn btn-success">View Product</a>
-
+                        <h2 class="card-title">{{ $shoe->name. ". Wow what a great choice" }}</h2>
+                        <h5>Thank you for your order. The order will be processed and shipped to you in 3-5 working days
+                        </h5>
+                        <a class="btn btn-success mb-5" href="{{route('welcome', $shoe->id)}}">Homepage</a>
                     </div>
                 </div>
-                @endforeach
-    </section>
-    <!-- Footer-->
-    <footer class="container">
-        <p>&copy; 2021-2022 Company, Inc. &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
-    </footer>
-    <!-- Bootstrap core JS-->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
-    <!-- Core theme JS-->
-    <script src="js/scripts.js"></script>
+                <!-- Nested row for non-featured blog posts-->
+
+
+                <!--For Page-->
+
+                <!-- Footer-->
+                <footer class="container">
+                    <p>&copy; 2021-2022 Company, Inc. &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a>
+                    </p>
+                </footer>
+                <!-- Bootstrap core JS-->
+                <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+                <!-- Core theme JS-->
+                <script src="js/scripts.js"></script>
 </body>
 
 </html>
