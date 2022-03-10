@@ -91,7 +91,7 @@
 
                     @foreach ($shoes as $shoe)
 <div class="card " style="width: 18rem;">
-  <img class="card-img-top" src="..." alt="Card image cap">
+  <img class="card-img-top" src="{{ URL::to('/assets/images/'.$shoe->image) }}" alt="Card image cap">
   <div class="card-body">
     <h5 class="card-title">{{$shoe->name}}</h5>
     <p class="card-text">{{$shoe->price}}</p>
@@ -102,9 +102,9 @@
 @endforeach
         </section>
         <!-- Footer-->
-        <footer class="py-5 bg-dark">
-            <div class="container"><p class="m-0 text-center text-white">Copyright &copy; Your Website 2021</p></div>
-        </footer>
+      <footer class="container">
+        <p>&copy; 2021-2022 Company, Inc. &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
+      </footer>
         <!-- Bootstrap core JS-->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
         <!-- Core theme JS-->
