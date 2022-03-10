@@ -86,17 +86,18 @@
         </header>
         <!-- Section-->
         <section class="py-5">
-            <div class="container px-4 px-lg-5 mt-5">
-                <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
+            <div class="container px-lg-5 mt-5">
+                <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 ">
 
                     @foreach ($shoes as $shoe)
-<div class="card " style="width: 18rem;">
+<div class="card m-.25">
   <img class="card-img-top" src="{{ URL::to('/assets/images/'.$shoe->image) }}" alt="Card image cap">
   <div class="card-body">
     <h5 class="card-title">{{$shoe->name}}</h5>
     <p class="card-text">{{$shoe->price}}</p>
-    <p class="card-text">{{$shoe->description}}</p>
-    <a href="#" class="btn btn-primary">Buy now</a>
+    <p class="card-text">{{$shoe->shoe_condition}}</p>
+    <a href="#" class="btn btn-success">Buy now</a>
+    <a href="#" class="btn btn-danger">Sell now</a>
   </div>
 </div>
 @endforeach
