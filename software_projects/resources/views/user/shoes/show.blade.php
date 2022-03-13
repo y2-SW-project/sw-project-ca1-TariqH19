@@ -93,7 +93,7 @@
             <div class="col-lg-8">
                 <!-- Featured blog post-->
                 <div class="card mb-4">
-                    <a href="#!"><img class="card-img-top" src="{{ URL::to('/assets/images/'.$shoe->image) }}"
+                    <a href="#!"><img class="card-img-top img-fluid" src="{{ URL::to('/assets/images/'.$shoe->image) }}"
                             alt="..." /></a>
                     <div class="card-body">
                         <h2 class="card-title">{{ $shoe->name }}</h2>
