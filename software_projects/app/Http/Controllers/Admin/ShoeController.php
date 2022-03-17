@@ -47,15 +47,17 @@ class ShoeController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'title' => 'required',
+            'name' => 'required',
             'price' => 'required|max:500',
+            'image' =>'required|max:500',
             'description' =>'required|max:500'
             
         ]);
 
     $shoe = new Shoe();
-    $shoe->title = $request->input('title');
+    $shoe->name = $request->input('name');
     $shoe->price = $request->input('price');
+    $shoe->image = $request->input('image');
     $shoe->description = $request->input('description');
     $shoe->save();
 
@@ -103,20 +105,22 @@ class ShoeController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $course = Course::findOrFail($id);
+        $shoe = Shoe::findOrFail($id);
         $request->validate([
-            'title' => 'required',
+            'name' => 'required',
             'price' => 'required|max:500',
+            'image' => 'required|max:500',
             'description' =>'required|max:500'
         ]);
 
         // if validation passes then update existing course
-        $shoe->title = $request->input('title');
+        $shoe->name = $request->input('name');
         $shoe->price = $request->input('price');
+        $shoe->image = $request->input('image');
         $shoe->description = $request->input('description');
         $shoe->save();
 
-        return redirect()->route('admin.courses.index');
+        return redirect()->route('admin.shoes.index');
     }
 
     /**

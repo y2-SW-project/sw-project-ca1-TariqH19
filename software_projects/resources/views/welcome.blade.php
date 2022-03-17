@@ -116,7 +116,7 @@
                         </div>
                     </div>
                     <div class="carousel-item">
-                        <img class="second-slide img-fluid" src="{{ URL::to('/assets/images/pic2.jpg') }} "
+                        <img class="second-slide img-fluid" src="{{ URL::to('/assets/images/pic7.jpg') }} "
                             alt="Second slide">
 
                         <div class="container">

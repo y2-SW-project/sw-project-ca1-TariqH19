@@ -98,7 +98,6 @@
                     <div class="card-body">
                         <h5 class="card-title">{{$shoe->name}}</h5>
                         <p class="card-text">{{$shoe->price}}</p>
-                        <p class="card-text">{{$shoe->shoe_condition}}</p>
                         <a href="{{route('user.shoes.show', $shoe->id)}}" class="btn btn-success">View Product</a>
 
                     </div>
