@@ -12,9 +12,11 @@
     <!-- Core theme CSS (includes Bootstrap)-->
     <link href="css/styles.css" rel="stylesheet" />
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <script type="text/javascript" src="{{ URL::asset('js/myJava.js') }}"></script>
 </head>
 
 <body>
+
     <div id="app">
 
         <nav class="navbar navbar-expand-md bg-dark">
@@ -80,9 +82,8 @@
     <header class="py-5 bg-light border-bottom mb-4">
         <div class="container">
 
-            <a class="btn-lg btn-info" href="{{route('user.shoes.index', $shoe->id)}}">
-                <-back to all products</a>
-                    <h1 class="text-center fw-bolder">{{ $shoe->name }}</h1>
+
+            <h1 class="text-start fw-bolder">{{ $shoe->name }}</h1>
 
         </div>
     </header>
@@ -142,22 +143,97 @@
                     <div class="card-body">
                         <div class="row">
                             <div class="col-sm-6">
-                                <a class="btn btn-success mb-5" href="{{route('user.shoes.bid', $shoe->id)}}">Buy/Bid
-                                    now</a>
-                                <form>
-                                    <div class="form-row">
-                                        <div class="col">
-                                            <label class="sr-only" for="inlineFormInput">Name</label>
-                                            <input type="text" class="form-control mb-2" id="inlineFormInput"
-                                                placeholder="Bid Amount">
-                                            <button type="submit" class="btn btn-primary mb-2">Place bid</button>
+                                <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                                    data-bs-target="#exampleModal" data-bs-whatever="@mdo">Buy now</button>
+
+
+                                <div class="modal fade" id="exampleModal" tabindex="-1"
+                                    aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h5 class="modal-title" id="exampleModalLabel">Buy now</h5>
+                                            </div>
+                                            <div class="modal-body">
+                                                <form>
+                                                    <div class="mb-3">
+                                                        <div><label for="recipient-name"
+                                                                class="col-form-label">Recipient:</label></div>
+                                                        <h5 class="btn btn-light">{{$shoe->price}}</h5>
+                                                        <div><label for="recipient-name"
+                                                                class="col-form-label">Shipping:</label></div>
+                                                        <h5 class="btn btn-light">€15</h5>
+                                                        <div><label for="recipient-name"
+                                                                class="col-form-label">Total:</label></div>
+                                                        <h5 class="btn btn-light">€420</h5>
+                                                    </div>
+                                                    <div class="mb-3">
+                                                        <label for="message-text" class="col-form-label">Card
+                                                            details:</label>
+                                                        <textarea class="form-control" id="message-text"></textarea>
+                                                    </div>
+                                                </form>
+                                            </div>
+                                            <div class="modal-footer ">
+                                                <button type="button" class="btn btn-secondary"
+                                                    data-bs-dismiss="modal">Close</button>
+                                                <a class="btn btn-primary" href="{{route('user.shoes.bid', $shoe->id)}}"
+                                                    type="button">Buy now</a>
+                                            </div>
+
                                         </div>
                                     </div>
-                                </form>
-
+                                </div>
                             </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card mb-4">
+                    <div class="card-header">Bidding</div>
+                    <div class="card-body">
+                        <div class="row">
                             <div class="col-sm-6">
-                                <h5 class="btn btn-light">{{$shoe->price}}</h5>
+                                <button type="button" class="btn btn-success" data-bs-toggle="modal"
+                                    data-bs-target="#exampleModal2" data-bs-whatever="@mdo">Bid now</button>
+
+
+                                <div class="modal fade" id="exampleModal2" tabindex="-1"
+                                    aria-labelledby="exampleModalLabel2" aria-hidden="true">
+                                    <div class="modal-dialog">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h5 class="modal-title" id="exampleModalLabel">Bid now</h5>
+                                            </div>
+                                            <div class="modal-body">
+                                                <form>
+                                                    <div class="mb-3">
+                                                        <div><label for="recipient-name"
+                                                                class="col-form-label">Price:</label></div>
+                                                        <h5 class="btn btn-light">{{$shoe->price}}</h5>
+                                                        <div><label for="recipient-name"
+                                                                class="col-form-label">Shipping:</label></div>
+                                                        <h5 class="btn btn-light">€15</h5>
+                                                        <div><label for="recipient-name" class="col-form-label">Your
+                                                                bid:</label></div>
+                                                        <textarea class="form-control" id="message-text"></textarea>
+                                                    </div>
+                                                    <div class="mb-3">
+                                                        <label for="message-text" class="col-form-label">Card
+                                                            details:</label>
+                                                        <textarea class="form-control" id="message-text"></textarea>
+                                                    </div>
+                                                </form>
+                                            </div>
+                                            <div class="modal-footer ">
+                                                <button type="button" class="btn btn-secondary"
+                                                    data-bs-dismiss="modal">Close</button>
+                                                <button type="button" class="btn btn-success"
+                                                    data-bs-dismiss="modal">Bid Now</button>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -168,15 +244,53 @@
                     <div class="card-body">
                         <div class="row">
                             <div class="col-sm-6">
-                                <h5 class="btn btn-danger">Sell Now</h5>
+                                <button type="button" class="btn btn-danger" data-bs-toggle="modal"
+                                    data-bs-target="#exampleModal3" data-bs-whatever="@mdo">Sell now</button>
 
-                            </div>
-                            <div class="col-sm-6">
-                                <h5 class="btn btn-light">{{$shoe->price}}</h5>
+
+                                <div class="modal fade" id="exampleModal3" tabindex="-1"
+                                    aria-labelledby="exampleModalLabel3" aria-hidden="true">
+                                    <div class="modal-dialog">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h5 class="modal-title" id="exampleModalLabel">Sell now</h5>
+                                            </div>
+                                            <div class="modal-body">
+                                                <form>
+                                                    <div class="mb-3">
+                                                        <div><label for="recipient-name"
+                                                                class="col-form-label">Price:</label></div>
+                                                        <h5 class="btn btn-light">{{$shoe->price}}</h5>
+                                                        <div><label for="recipient-name"
+                                                                class="col-form-label">Shipping:</label></div>
+                                                        <h5 class="btn btn-light">€15</h5>
+                                                        <div><label for="recipient-name" class="col-form-label">Your
+                                                                selling price:</label></div>
+                                                        <textarea class="form-control" id="message-text"></textarea>
+                                                    </div>
+                                                    <div class="mb-3">
+                                                        <label for="message-text" class="col-form-label">Account
+                                                            details:</label>
+                                                        <textarea class="form-control" id="message-text"></textarea>
+                                                    </div>
+                                                </form>
+                                            </div>
+                                            <div class="modal-footer ">
+                                                <button type="button" class="btn btn-secondary"
+                                                    data-bs-dismiss="modal">Close</button>
+                                                <button type="button" class="btn btn-danger"
+                                                    data-bs-dismiss="modal">Sell
+                                                    Now</button>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
+
             </div>
         </div>
     </div>
@@ -187,7 +301,9 @@
     <!-- Bootstrap core JS-->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
     <!-- Core theme JS-->
+
     <script src="js/scripts.js"></script>
+    <script src="toast.js"></script>
 </body>
 
 </html>
