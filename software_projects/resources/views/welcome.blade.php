@@ -26,6 +26,7 @@
     <link href="carousel.css" rel="stylesheet">
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <script type="text/javascript" src="{{ URL::asset('/js/myScript.js') }}"></script>
 </head>
 
 <body>
@@ -132,54 +133,63 @@
                             <div class="carousel-caption text-left">
                                 <h1>Sign up today </h1>
 
-
-
-
                                 <a class="btn btn-lg btn-primary"
                                     href="{{ route('register') }}">{{ __('Register') }}</a>
 
+                                <button type="button" class="btn btn-primary" id="liveToastBtn">Show live toast</button>
 
+                                <div class="position-fixed bottom-0 end-0 p-3" style="z-index: 11">
+                                    <div id="liveToast" class="toast" role="alert" aria-live="assertive"
+                                        aria-atomic="true">
+                                        <div class="toast-header">
+                                            <img src="..." class="rounded me-2" alt="...">
+                                            <strong class="me-auto">Bootstrap</strong>
+                                            <small>11 mins ago</small>
+                                            <button type="button" class="btn-close" data-bs-dismiss="toast"
+                                                aria-label="Close"></button>
+                                        </div>
+                                        <div class="toast-body">
+                                            Hello, world! This is a toast message.
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
+                    <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="carousel-control-next" href="#myCarousel" role="button" data-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
                 </div>
-                <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="sr-only">Previous</span>
-                </a>
-                <a class="carousel-control-next" href="#myCarousel" role="button" data-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="sr-only">Next</span>
-                </a>
             </div>
-    </div>
 
-    <!-- Marketing messaging and featurettes
+            <!-- Marketing messaging and featurettes
       ================================================== -->
-    <!-- Wrap the rest of the page in another container to center all the content. -->
+            <!-- Wrap the rest of the page in another container to center all the content. -->
 
+            <!-- FOOTER -->
+            <footer class="container">
+                <p>&copy; 2021-2022 Company, Inc. &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
+            </footer>
+        </main>
 
-
-
-    <!-- FOOTER -->
-    <footer class="container">
-        <p>&copy; 2021-2022 Company, Inc. &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
-    </footer>
-    </main>
-
-    <!-- Bootstrap core JavaScript
+        <!-- Bootstrap core JavaScript
     ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">
-    </script>
-    <script>
-    window.jQuery || document.write('<script src="../../assets/js/vendor/jquery-slim.min.js"><\/script>')
-    </script>
-    <script src="../../assets/js/vendor/popper.min.js"></script>
-    <script src="../../dist/js/bootstrap.min.js"></script>
-    <!-- Just to make our placeholder images work. Don't actually copy the next line! -->
-    <script src="../../assets/js/vendor/holder.min.js"></script>
+        <!-- Placed at the end of the document so the pages load faster -->
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+            integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">
+        </script>
+        <script>
+        window.jQuery || document.write('<script src="../../assets/js/vendor/jquery-slim.min.js"><\/script>')
+        </script>
+        <script src="../../assets/js/vendor/popper.min.js"></script>
+        <script src="../../dist/js/bootstrap.min.js"></script>
+        <!-- Just to make our placeholder images work. Don't actually copy the next line! -->
+        <script src="../../assets/js/vendor/holder.min.js"></script>
 </body>
 
 </html>
