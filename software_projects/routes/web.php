@@ -16,7 +16,9 @@ Route::get('user/home', [App\Http\Controllers\User\HomeController::class, 'index
 
 Route::get('/user/shoes/', [UserShoeController::class, 'index'])->name('user.shoes.index');
 Route::get('/user/shoes/{id}', [UserShoeController::class, 'show'])->name('user.shoes.show');
+Route::get('/user/shoes/{id}/buy', [UserShoeController::class, 'buy'])->name('user.shoes.buy');
 Route::get('/user/shoes/{id}/bid', [UserShoeController::class, 'bid'])->name('user.shoes.bid');
+Route::get('/user/shoes/{id}/sell', [UserShoeController::class, 'sell'])->name('user.shoes.sell');
 
 Route::get('/admin/shoes/', [AdminShoeController::class, 'index'])->name('admin.shoes.index');
 Route::get('/admin/shoes/create', [AdminShoeController::class, 'create'])->name('admin.shoes.create');
@@ -25,4 +27,3 @@ Route::post('/admin/shoes/store', [AdminShoeController::class, 'store'])->name('
 Route::get('/admin/shoes/{id}/edit', [AdminShoeController::class, 'edit'])->name('admin.shoes.edit');
 Route::put('/admin/shoes/{id}', [AdminShoeController::class, 'update'])->name('admin.shoes.update');
 Route::delete('/admin/shoes/{id}', [AdminShoeController::class, 'destroy'])->name('admin.shoes.destroy');
-

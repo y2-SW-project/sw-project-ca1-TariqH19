@@ -84,9 +84,10 @@
                     <a href="#!"><img class="card-img-top" src="{{ URL::to('/assets/images/'.$shoe->image) }}"
                             alt="..." /></a>
                     <div class="card-body">
-                        <h2 class="card-title">{{ $shoe->name. ". Wow what a great choice" }}</h2>
-                        <h5>Thank you for your bid. The bid is now live we will notify you if your bid is accepted by
-                            the seller. Good Luck
+                        <h2 class="card-title">{{ $shoe->name. ". Wow we'll be happy to take em" }}</h2>
+                        <h5> {{"Thank you for selling your" .$shoe->name. "s" }}. Please ship the shoes to us and we
+                            will
+                            send the money to your account once we verify them to be authentic
                         </h5>
                         <a class="btn btn-success mb-5" href="{{route('welcome', $shoe->id)}}">Homepage</a>
                     </div>

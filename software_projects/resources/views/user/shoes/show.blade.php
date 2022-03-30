@@ -179,7 +179,7 @@
                                             <div class="modal-footer ">
                                                 <button type="button" class="btn btn-secondary"
                                                     data-bs-dismiss="modal">Close</button>
-                                                <a class="btn btn-primary" href="{{route('user.shoes.bid', $shoe->id)}}"
+                                                <a class="btn btn-primary" href="{{route('user.shoes.buy', $shoe->id)}}"
                                                     type="button" id="liveAlertBtn">Buy now</a>
                                             </div>
 
@@ -287,8 +287,8 @@
                                                     data-bs-dismiss="modal">Close</button>
 
                                                 <div id="liveAlertPlaceholder2"></div>
-                                                <button type="button" class="btn btn-danger"
-                                                    id="liveAlertBtn2">Sell</button>
+                                                <a href="{{route('user.shoes.sell', $shoe->id)}}" type="button"
+                                                    class="btn btn-danger" id="liveAlertBtn2">Sell Now</a>
                                             </div>
 
                                         </div>

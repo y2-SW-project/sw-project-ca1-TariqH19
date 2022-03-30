@@ -56,10 +56,26 @@ class ShoeController extends Controller
         ]);
     }
 
-    public function bid($id)
+    public function buy($id)
+    {
+        $shoes = Shoe::findOrFail($id);
+        return view('user.shoes.buy', [
+            'shoe' => $shoes
+        ]);
+    }
+
+        public function bid($id)
     {
         $shoes = Shoe::findOrFail($id);
         return view('user.shoes.bid', [
+            'shoe' => $shoes
+        ]);
+    }
+
+        public function sell($id)
+    {
+        $shoes = Shoe::findOrFail($id);
+        return view('user.shoes.sell', [
             'shoe' => $shoes
         ]);
     }
