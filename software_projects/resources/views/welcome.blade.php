@@ -26,7 +26,7 @@
     <link href="carousel.css" rel="stylesheet">
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
-    <script type="text/javascript" src="{{ URL::asset('/js/myScript.js') }}"></script>
+
 </head>
 
 <body>
@@ -110,7 +110,8 @@
                             <div class="carousel-caption text-left">
                                 <h1>The freshest shoes</h1>
 
-                                <p><a class="btn btn-lg btn-primary" href="#" role="button">Shop now</a></p>
+                                <p><a class="btn btn-lg btn-primary" href="{{route('user.shoes.index')}}"
+                                        role="button">Shop now</a></p>
                             </div>
                         </div>
                     </div>
@@ -136,23 +137,6 @@
                                 <a class="btn btn-lg btn-primary"
                                     href="{{ route('register') }}">{{ __('Register') }}</a>
 
-                                <button type="button" class="btn btn-primary" id="liveToastBtn">Show live toast</button>
-
-                                <div class="position-fixed bottom-0 end-0 p-3" style="z-index: 11">
-                                    <div id="liveToast" class="toast" role="alert" aria-live="assertive"
-                                        aria-atomic="true">
-                                        <div class="toast-header">
-                                            <img src="..." class="rounded me-2" alt="...">
-                                            <strong class="me-auto">Bootstrap</strong>
-                                            <small>11 mins ago</small>
-                                            <button type="button" class="btn-close" data-bs-dismiss="toast"
-                                                aria-label="Close"></button>
-                                        </div>
-                                        <div class="toast-body">
-                                            Hello, world! This is a toast message.
-                                        </div>
-                                    </div>
-                                </div>
                             </div>
                         </div>
                     </div>

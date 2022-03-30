@@ -12,7 +12,9 @@
     <!-- Core theme CSS (includes Bootstrap)-->
     <link href="css/styles.css" rel="stylesheet" />
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
-    <script type="text/javascript" src="{{ URL::asset('js/myJava.js') }}"></script>
+
+    <!--script type="text/javascript" src="{{ URL::asset('js/myScript.js') }}"></!--script-->
+
 </head>
 
 <body>
@@ -178,7 +180,7 @@
                                                 <button type="button" class="btn btn-secondary"
                                                     data-bs-dismiss="modal">Close</button>
                                                 <a class="btn btn-primary" href="{{route('user.shoes.bid', $shoe->id)}}"
-                                                    type="button">Buy now</a>
+                                                    type="button" id="liveAlertBtn">Buy now</a>
                                             </div>
 
                                         </div>
@@ -227,8 +229,12 @@
                                             <div class="modal-footer ">
                                                 <button type="button" class="btn btn-secondary"
                                                     data-bs-dismiss="modal">Close</button>
-                                                <button type="button" class="btn btn-success"
-                                                    data-bs-dismiss="modal">Bid Now</button>
+
+                                                <div id="liveAlertPlaceholder1"></div>
+                                                <a href="{{route('user.shoes.bid', $shoe->id)}}" type="button"
+                                                    class="btn btn-success" id="liveAlertBtn1">Bid Now</a>
+
+
                                             </div>
 
                                         </div>
@@ -238,6 +244,7 @@
                         </div>
                     </div>
                 </div>
+
                 <!-- Side widget-->
                 <div class="card mb-4">
                     <div class="card-header">Selling</div>
@@ -278,9 +285,10 @@
                                             <div class="modal-footer ">
                                                 <button type="button" class="btn btn-secondary"
                                                     data-bs-dismiss="modal">Close</button>
+
+                                                <div id="liveAlertPlaceholder2"></div>
                                                 <button type="button" class="btn btn-danger"
-                                                    data-bs-dismiss="modal">Sell
-                                                    Now</button>
+                                                    id="liveAlertBtn2">Sell</button>
                                             </div>
 
                                         </div>
@@ -302,8 +310,9 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
     <!-- Core theme JS-->
 
-    <script src="js/scripts.js"></script>
-    <script src="toast.js"></script>
+    <script type="text/javascript" src="{{ URL::asset('js/myScript.js') }}"></script>
+
+    <!--script src="js/myScript.js"></!--script-->
 </body>
 
 </html>
