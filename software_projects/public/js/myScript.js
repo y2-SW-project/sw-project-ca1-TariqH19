@@ -8,7 +8,7 @@ var alertTrigger = document.getElementById('liveAlertBtn')
 console.log(alertTrigger)
 alertTrigger.addEventListener('click', function() {
     console.log("bla");
-    alert('Are you sure you want to bid on this product', 'success')
+    alert('Are you sure you want to buy this product', 'success')
 })
 
 var alertPlaceholder1 = document.getElementById('liveAlertPlaceholder1')
