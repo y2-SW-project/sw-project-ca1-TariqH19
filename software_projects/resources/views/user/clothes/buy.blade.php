@@ -35,7 +35,10 @@
                     <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav mr-auto">
                         <li>
-                            <a class="nav-link btn text-light" href="{{route('user.clothes.index')}}">Browse</a>
+                            <a class="nav-link btn text-light" href="{{route('user.clothes.index')}}">Browse Shoes</a>
+                        </li>
+                        <li>
+                            <a class="nav-link btn text-light" href="{{route('user.clothes.index')}}">Browse Clothes</a>
                         </li>
                     </ul>
 

@@ -36,7 +36,10 @@
                     <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav mr-auto">
                         <li>
-                            <a class="nav-link btn text-light" href="{{route('user.clothes.index')}}">Browse</a>
+                            <a class="nav-link btn text-light" href="{{route('user.shoes.index')}}">Browse Shoes</a>
+                        </li>
+                        <li>
+                            <a class="nav-link btn text-info" href="{{route('user.clothes.index')}}">Browse Clothes</a>
                         </li>
                     </ul>
 
@@ -82,9 +85,9 @@
     </div>
     <!-- Header-->
     <header class="bg-dark py-5">
-        <div class="container px-4 px-lg-5 my-5">
+        <div class="container px-4 px-lg-5 ">
             <div class="text-center text-white">
-                <h1 class="display-4 fw-bolder">All Products</h1>
+                <h1 class="display-4 fw-bolder">All Clothes</h1>
             </div>
         </div>
     </header>

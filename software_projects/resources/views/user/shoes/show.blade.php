@@ -36,7 +36,10 @@
                     <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav mr-auto">
                         <li>
-                            <a class="nav-link btn text-light" href="{{route('user.shoes.index')}}">Browse</a>
+                            <a class="nav-link btn text-light" href="{{route('user.shoes.index')}}">Browse Shoes</a>
+                        </li>
+                        <li>
+                            <a class="nav-link btn text-light" href="{{route('user.clothes.index')}}">Browse Clothes</a>
                         </li>
                     </ul>
 
@@ -179,8 +182,37 @@
                                             <div class="modal-footer ">
                                                 <button type="button" class="btn btn-secondary"
                                                     data-bs-dismiss="modal">Close</button>
+
+                                                <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                                                    data-bs-target="#exampleModal2" data-bs-whatever="@mdo">Buy
+                                                    Now</button>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="modal fade" id="exampleModal2" tabindex="-1"
+                                    aria-labelledby="exampleModalLabel2" aria-hidden="true">
+                                    <div class="modal-dialog">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h5 class="modal-title" id="exampleModalLabel2">Last Step</h5>
+                                            </div>
+                                            <div class="modal-body">
+                                                <form>
+                                                    <div class="mb-3">
+                                                        <div><label for="recipient-name"
+                                                                class="col-form-label">{{$shoe->name}}</label></div>
+                                                        <h5 class="btn btn-light">Are you sure you want to purchase this
+                                                            product</h5>
+
+                                                </form>
+                                            </div>
+                                            <div class="modal-footer ">
+                                                <button type="button" class="btn btn-secondary"
+                                                    data-bs-dismiss="modal">Close</button>
                                                 <a class="btn btn-primary" href="{{route('user.shoes.buy', $shoe->id)}}"
-                                                    type="button" id="liveAlertBtn">Buy now</a>
+                                                    type="button">Buy now</a>
                                             </div>
 
                                         </div>
@@ -196,15 +228,15 @@
                         <div class="row">
                             <div class="col-sm-6">
                                 <button type="button" class="btn btn-success" data-bs-toggle="modal"
-                                    data-bs-target="#exampleModal2" data-bs-whatever="@mdo">Bid now</button>
+                                    data-bs-target="#exampleModal3" data-bs-whatever="@mdo">Bid now</button>
 
 
-                                <div class="modal fade" id="exampleModal2" tabindex="-1"
-                                    aria-labelledby="exampleModalLabel2" aria-hidden="true">
+                                <div class="modal fade" id="exampleModal3" tabindex="-1"
+                                    aria-labelledby="exampleModalLabel3" aria-hidden="true">
                                     <div class="modal-dialog">
                                         <div class="modal-content">
                                             <div class="modal-header">
-                                                <h5 class="modal-title" id="exampleModalLabel">Bid now</h5>
+                                                <h5 class="modal-title" id="exampleModalLabel3">Bid now</h5>
                                             </div>
                                             <div class="modal-body">
                                                 <form>
@@ -230,9 +262,9 @@
                                                 <button type="button" class="btn btn-secondary"
                                                     data-bs-dismiss="modal">Close</button>
 
-                                                <div id="liveAlertPlaceholder1"></div>
-                                                <a href="{{route('user.shoes.bid', $shoe->id)}}" type="button"
-                                                    class="btn btn-success" id="liveAlertBtn1">Bid Now</a>
+                                                <button type="button" class="btn btn-success" data-bs-toggle="modal"
+                                                    data-bs-target="#exampleModal4" data-bs-whatever="@mdo">Bid
+                                                    Now</button>
 
 
                                             </div>
@@ -240,55 +272,28 @@
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Side widget-->
-                <div class="card mb-4">
-                    <div class="card-header">Selling</div>
-                    <div class="card-body">
-                        <div class="row">
-                            <div class="col-sm-6">
-                                <button type="button" class="btn btn-danger" data-bs-toggle="modal"
-                                    data-bs-target="#exampleModal3" data-bs-whatever="@mdo">Sell now</button>
-
-
-                                <div class="modal fade" id="exampleModal3" tabindex="-1"
-                                    aria-labelledby="exampleModalLabel3" aria-hidden="true">
+                                <div class="modal fade" id="exampleModal4" tabindex="-1"
+                                    aria-labelledby="exampleModalLabel4" aria-hidden="true">
                                     <div class="modal-dialog">
                                         <div class="modal-content">
                                             <div class="modal-header">
-                                                <h5 class="modal-title" id="exampleModalLabel">Sell now</h5>
+                                                <h5 class="modal-title" id="exampleModalLabel4">Last Step</h5>
                                             </div>
                                             <div class="modal-body">
                                                 <form>
                                                     <div class="mb-3">
                                                         <div><label for="recipient-name"
-                                                                class="col-form-label">Price:</label></div>
-                                                        <h5 class="btn btn-light">{{$shoe->price}}</h5>
-                                                        <div><label for="recipient-name"
-                                                                class="col-form-label">Shipping:</label></div>
-                                                        <h5 class="btn btn-light">€15</h5>
-                                                        <div><label for="recipient-name" class="col-form-label">Your
-                                                                selling price:</label></div>
-                                                        <textarea class="form-control" id="message-text"></textarea>
-                                                    </div>
-                                                    <div class="mb-3">
-                                                        <label for="message-text" class="col-form-label">Account
-                                                            details:</label>
-                                                        <textarea class="form-control" id="message-text"></textarea>
-                                                    </div>
+                                                                class="col-form-label">{{$shoe->name}}</label></div>
+                                                        <h5 class="btn btn-light">Are you sure you want to bid on this
+                                                            product</h5>
+
                                                 </form>
                                             </div>
                                             <div class="modal-footer ">
                                                 <button type="button" class="btn btn-secondary"
                                                     data-bs-dismiss="modal">Close</button>
-
-                                                <div id="liveAlertPlaceholder2"></div>
-                                                <a href="{{route('user.shoes.sell', $shoe->id)}}" type="button"
-                                                    class="btn btn-danger" id="liveAlertBtn2">Sell Now</a>
+                                                <a class="btn btn-success" href="{{route('user.shoes.bid', $shoe->id)}}"
+                                                    type="button">Bid now</a>
                                             </div>
 
                                         </div>
@@ -298,9 +303,92 @@
                         </div>
                     </div>
                 </div>
+            </div>
 
+            <!-- Side widget-->
+            <div class="card mb-4">
+                <div class="card-header">Selling</div>
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <button type="button" class="btn btn-danger" data-bs-toggle="modal"
+                                data-bs-target="#exampleModal5" data-bs-whatever="@mdo">Sell now</button>
+
+
+                            <div class="modal fade" id="exampleModal5" tabindex="-1"
+                                aria-labelledby="exampleModalLabel5" aria-hidden="true">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title" id="exampleModalLabel5">Sell now</h5>
+                                        </div>
+                                        <div class="modal-body">
+                                            <form>
+                                                <div class="mb-3">
+                                                    <div><label for="recipient-name"
+                                                            class="col-form-label">Price:</label></div>
+                                                    <h5 class="btn btn-light">{{$shoe->price}}</h5>
+                                                    <div><label for="recipient-name"
+                                                            class="col-form-label">Shipping:</label></div>
+                                                    <h5 class="btn btn-light">€15</h5>
+                                                    <div><label for="recipient-name" class="col-form-label">Your
+                                                            selling price:</label></div>
+                                                    <textarea class="form-control" id="message-text"></textarea>
+                                                </div>
+                                                <div class="mb-3">
+                                                    <label for="message-text" class="col-form-label">Account
+                                                        details:</label>
+                                                    <textarea class="form-control" id="message-text"></textarea>
+                                                </div>
+                                            </form>
+                                        </div>
+                                        <div class="modal-footer ">
+                                            <button type="button" class="btn btn-secondary"
+                                                data-bs-dismiss="modal">Close</button>
+
+                                            <button type="button" class="btn btn-danger" data-bs-toggle="modal"
+                                                data-bs-target="#exampleModal6" data-bs-whatever="@mdo">Sell
+                                                Now</button>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modal fade" id="exampleModal6" tabindex="-1"
+                                aria-labelledby="exampleModalLabel6" aria-hidden="true">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title" id="exampleModalLabel6">Last Step</h5>
+                                        </div>
+                                        <div class="modal-body">
+                                            <form>
+                                                <div class="mb-3">
+                                                    <div><label for="recipient-name"
+                                                            class="col-form-label">{{$shoe->name}}</label></div>
+                                                    <h5 class="btn btn-light">Are you sure you want to sell this
+                                                        product</h5>
+
+                                            </form>
+                                        </div>
+                                        <div class="modal-footer ">
+                                            <button type="button" class="btn btn-secondary"
+                                                data-bs-dismiss="modal">Close</button>
+                                            <a class="btn btn-danger" href="{{route('user.shoes.sell', $shoe->id)}}"
+                                                type="button">Sell now</a>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
+
+    </div>
+    </div>
     </div>
     <!-- Footer-->
     <footer class="container">
