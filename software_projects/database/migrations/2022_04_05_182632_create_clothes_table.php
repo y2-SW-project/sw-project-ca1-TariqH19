@@ -32,4 +32,4 @@ class CreateClothesTable extends Migration
     {
         Schema::dropIfExists('clothes');
     }
-}   
+}

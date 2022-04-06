@@ -48,7 +48,10 @@
                     <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav mr-auto">
                         <li>
-                            <a class="nav-link btn text-light" href="{{route('user.shoes.index')}}">Browse</a>
+                            <a class="nav-link btn text-light" href="{{route('user.shoes.index')}}">Browse Shoes</a>
+                        </li>
+                        <li>
+                            <a class="nav-link btn text-light" href="{{route('user.clothes.index')}}">Browse Clothes</a>
                         </li>
                     </ul>
 
@@ -123,7 +126,8 @@
                             <div class="carousel-caption  text-left">
                                 <h1>The cleanest clothes</h1>
 
-                                <p><a class="btn btn-lg btn-primary" href="#" role="button">Shop Now</a></p>
+                                <p><a class="btn btn-lg btn-primary" href="{{route('user.clothes.index')}}"
+                                        role="button">Shop Now</a></p>
                             </div>
                         </div>
                     </div>

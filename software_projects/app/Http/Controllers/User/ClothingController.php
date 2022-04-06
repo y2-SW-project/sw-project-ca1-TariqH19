@@ -52,7 +52,7 @@ class ClothingController extends Controller
     {
         $clothes = Clothing::findOrFail($id);
         return view('user.clothes.show', [
-            'shoe' => $clothes
+            'clothing' => $clothes
         ]);
     }
 
@@ -76,7 +76,7 @@ class ClothingController extends Controller
     {
         $clothes = Clothing::findOrFail($id);
         return view('user.clothes.sell', [
-            'shoe' => $clothes
+            'clothing' => $clothes
         ]);
     }
 

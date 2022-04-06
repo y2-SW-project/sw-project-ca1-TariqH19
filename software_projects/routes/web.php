@@ -3,8 +3,8 @@ use App\Http\Controllers\PageController;
 use App\Http\Controllers\Admin\ShoeController as AdminShoeController;
 use App\Http\Controllers\User\ShoeController as UserShoeController;
 // this is for the clothing
-// use App\Http\Controllers\Admin\ClothingController as AdminClothingController;
-// use App\Http\Controllers\User\ClothingController as UserClothingController;
+use App\Http\Controllers\Admin\ClothingController as AdminClothingController;
+use App\Http\Controllers\User\ClothingController as UserClothingController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', [PageController::class, 'welcome'])->name('welcome');
@@ -36,16 +36,16 @@ Route::delete('/admin/shoes/{id}', [AdminShoeController::class, 'destroy'])->nam
 // THIS IS FOR THE CLOTHING
 
 
-// Route::get('/user/clothes/', [UserClothingController::class, 'index'])->name('user.clothes.index');
-// Route::get('/user/clothes/{id}', [UserClothingController::class, 'show'])->name('user.clothes.show');
-// Route::get('/user/clothes/{id}/buy', [UserClothingController::class, 'buy'])->name('user.clothes.buy');
-// Route::get('/user/clothes/{id}/bid', [UserClothingController::class, 'bid'])->name('user.clothes.bid');
-// Route::get('/user/clothes/{id}/sell', [UserClothingController::class, 'sell'])->name('user.clothes.sell');
+Route::get('/user/clothes/', [UserClothingController::class, 'index'])->name('user.clothes.index');
+Route::get('/user/clothes/{id}', [UserClothingController::class, 'show'])->name('user.clothes.show');
+Route::get('/user/clothes/{id}/buy', [UserClothingController::class, 'buy'])->name('user.clothes.buy');
+Route::get('/user/clothes/{id}/bid', [UserClothingController::class, 'bid'])->name('user.clothes.bid');
+Route::get('/user/clothes/{id}/sell', [UserClothingController::class, 'sell'])->name('user.clothes.sell');
 
-// Route::get('/admin/clothes/', [AdminClothingController::class, 'index'])->name('admin.clothes.index');
-// Route::get('/admin/clothes/create', [AdminClothingController::class, 'create'])->name('admin.clothes.create');
-// Route::get('/admin/clothes/{id}', [AdminClothingController::class, 'show'])->name('admin.clothes.show');
-// Route::post('/admin/clothes/store', [AdminClothingController::class, 'store'])->name('admin.clothes.store');
-// Route::get('/admin/clothes/{id}/edit', [AdminClothingController::class, 'edit'])->name('admin.clothes.edit');
-// Route::put('/admin/clothes/{id}', [AdminClothingController::class, 'update'])->name('admin.clothes.update');
-// Route::delete('/admin/clothes/{id}', [AdminClothingController::class, 'destroy'])->name('admin.clothes.destroy');
+Route::get('/admin/clothes/', [AdminClothingController::class, 'index'])->name('admin.clothes.index');
+Route::get('/admin/clothes/create', [AdminClothingController::class, 'create'])->name('admin.clothes.create');
+Route::get('/admin/clothes/{id}', [AdminClothingController::class, 'show'])->name('admin.clothes.show');
+Route::post('/admin/clothes/store', [AdminClothingController::class, 'store'])->name('admin.clothes.store');
+Route::get('/admin/clothes/{id}/edit', [AdminClothingController::class, 'edit'])->name('admin.clothes.edit');
+Route::put('/admin/clothes/{id}', [AdminClothingController::class, 'update'])->name('admin.clothes.update');
+Route::delete('/admin/clothes/{id}', [AdminClothingController::class, 'destroy'])->name('admin.clothes.destroy');
