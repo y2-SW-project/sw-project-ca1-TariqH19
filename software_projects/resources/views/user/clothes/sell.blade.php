@@ -84,8 +84,8 @@
             <div class="col-lg-8 align-items-center">
                 <!-- Featured blog post-->
                 <div class="card mb-4">
-                    <a href="#!"><img class="card-img-top" src="{{ URL::to('/assets/images/'.$clothing->image) }}"
-                            alt="..." /></a>
+                    <a href="#!"><img class="card-img-top"
+                            src="{{ URL::to('/assets/images/clothes/'.$clothing->image) }}" alt="..." /></a>
                     <div class="card-body">
                         <h2 class="card-title">{{ $clothing->name. ". Wow we'll be happy to take em" }}</h2>
                         <h5> {{"Thank you for selling your" .$clothing->name. "s" }}. Please ship the itemm to us and we

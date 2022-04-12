@@ -99,8 +99,8 @@
             <div class="col-lg-8">
                 <!-- Featured blog post-->
                 <div class="card mb-4">
-                    <a href="#!"><img class="card-img-top img-fluid" src="{{ URL::to('/assets/images/'.$shoe->image) }}"
-                            alt="..." /></a>
+                    <a href="#!"><img class="card-img-top img-fluid"
+                            src="{{ URL::to('/assets/images/shoes/'.$shoe->image) }}" alt="..." /></a>
                     <div class="card-body">
                         <h2 class="card-title">{{ $shoe->name }}</h2>
                         <p class="card-text">{{ $shoe->description }}</p>
@@ -162,18 +162,18 @@
                                             <div class="modal-body">
                                                 <form>
                                                     <div class="mb-3">
-                                                        <div><label for="recipient-name"
-                                                                class="col-form-label">Recipient:</label></div>
+                                                        <div><label for="recipient-name" class="col-form-label">Buy
+                                                                Now:</label></div>
                                                         <h5 class="btn btn-light">{{$shoe->price}}</h5>
-                                                        <div><label for="recipient-name"
-                                                                class="col-form-label">Shipping:</label></div>
-                                                        <h5 class="btn btn-light">€15</h5>
-                                                        <div><label for="recipient-name"
-                                                                class="col-form-label">Total:</label></div>
-                                                        <h5 class="btn btn-light">{{$shoe->price}}</h5>
+
                                                     </div>
                                                     <div class="mb-3">
                                                         <label for="message-text" class="col-form-label">Card
+                                                            details:</label>
+                                                        <textarea class="form-control" id="message-text"></textarea>
+                                                    </div>
+                                                    <div class="mb-3">
+                                                        <label for="message-text" class="col-form-label">Shipping
                                                             details:</label>
                                                         <textarea class="form-control" id="message-text"></textarea>
                                                     </div>
@@ -244,15 +244,18 @@
                                                         <div><label for="recipient-name"
                                                                 class="col-form-label">Price:</label></div>
                                                         <h5 class="btn btn-light">{{$shoe->price}}</h5>
-                                                        <div><label for="recipient-name"
-                                                                class="col-form-label">Shipping:</label></div>
-                                                        <h5 class="btn btn-light">€15</h5>
+
                                                         <div><label for="recipient-name" class="col-form-label">Your
                                                                 bid:</label></div>
                                                         <textarea class="form-control" id="message-text"></textarea>
                                                     </div>
                                                     <div class="mb-3">
                                                         <label for="message-text" class="col-form-label">Card
+                                                            details:</label>
+                                                        <textarea class="form-control" id="message-text"></textarea>
+                                                    </div>
+                                                    <div class="mb-3">
+                                                        <label for="message-text" class="col-form-label">Shipping
                                                             details:</label>
                                                         <textarea class="form-control" id="message-text"></textarea>
                                                     </div>
@@ -328,9 +331,7 @@
                                                     <div><label for="recipient-name"
                                                             class="col-form-label">Price:</label></div>
                                                     <h5 class="btn btn-light">{{$shoe->price}}</h5>
-                                                    <div><label for="recipient-name"
-                                                            class="col-form-label">Shipping:</label></div>
-                                                    <h5 class="btn btn-light">€15</h5>
+
                                                     <div><label for="recipient-name" class="col-form-label">Your
                                                             selling price:</label></div>
                                                     <textarea class="form-control" id="message-text"></textarea>

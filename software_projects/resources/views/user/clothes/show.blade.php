@@ -100,7 +100,7 @@
                 <!-- Featured blog post-->
                 <div class="card mb-4">
                     <a href="#!"><img class="card-img-top img-fluid"
-                            src="{{ URL::to('/assets/images/'.$clothing->image) }}" alt="..." /></a>
+                            src="{{ URL::to('/assets/images/clothes/'.$clothing->image) }}" alt="..." /></a>
                     <div class="card-body">
                         <h2 class="card-title">{{ $clothing->name }}</h2>
                         <p class="card-text">{{ $clothing->description }}</p>
@@ -157,9 +157,7 @@
                                                         <div><label for="recipient-name"
                                                                 class="col-form-label">Price:</label></div>
                                                         <h5 class="btn btn-light">{{$clothing->price}}</h5>
-                                                        <div><label for="recipient-name"
-                                                                class="col-form-label">Shipping:</label></div>
-                                                        <h5 class="btn btn-light">€15</h5>
+
                                                         <div><label for="recipient-name" class="col-form-label">Total
                                                                 {{$clothing->price}}</label></div>
                                                         <textarea class="form-control" id="message-text"></textarea>
@@ -233,7 +231,7 @@
                                 <div class="modal-dialog">
                                     <div class="modal-content">
                                         <div class="modal-header">
-                                            <h5 class="modal-title" id="exampleModalLabel">Buy now</h5>
+                                            <h5 class="modal-title" id="exampleModalLabel">Bid now</h5>
                                         </div>
                                         <div class="modal-body">
                                             <form>
@@ -241,9 +239,7 @@
                                                     <div><label for="recipient-name"
                                                             class="col-form-label">Price:</label></div>
                                                     <h5 class="btn btn-light">{{$clothing->price}}</h5>
-                                                    <div><label for="recipient-name"
-                                                            class="col-form-label">Shipping:</label></div>
-                                                    <h5 class="btn btn-light">€15</h5>
+
                                                     <div><label for="recipient-name" class="col-form-label">Your
                                                             bid:</label></div>
                                                     <textarea class="form-control" id="message-text"></textarea>
@@ -326,9 +322,7 @@
                                                 <div><label for="recipient-name" class="col-form-label">Price:</label>
                                                 </div>
                                                 <h5 class="btn btn-light">{{$clothing->price}}</h5>
-                                                <div><label for="recipient-name"
-                                                        class="col-form-label">Shipping:</label></div>
-                                                <h5 class="btn btn-light">€15</h5>
+
                                                 <div><label for="recipient-name" class="col-form-label">Your
                                                         selling price:</label></div>
                                                 <textarea class="form-control" id="message-text"></textarea>

@@ -84,7 +84,7 @@
             <div class="col-lg-8 align-items-center">
                 <!-- Featured blog post-->
                 <div class="card mb-4">
-                    <a href="#!"><img class="card-img-top" src="{{ URL::to('/assets/images/'.$shoe->image) }}"
+                    <a href="#!"><img class="card-img-top" src="{{ URL::to('/assets/images/clothes/'.$shoe->image) }}"
                             alt="..." /></a>
                     <div class="card-body">
                         <h2 class="card-title">{{ $shoe->name. ". Wow what a great choice" }}</h2>

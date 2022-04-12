@@ -98,10 +98,11 @@
 
                 @foreach ($shoes as $shoe)
                 <div class="card m-.25">
-                    <img class="card-img-top" src="{{ URL::to('/assets/images/'.$shoe->image) }}" alt="Card image cap">
+                    <img class="card-img-top" src="{{ URL::to('/assets/images/shoes/'.$shoe->image) }}"
+                        alt="Card image cap">
                     <div class="card-body">
-                        <h5 class="card-title">{{$shoe->name}}</h5>
-                        <p class="card-text">{{$shoe->price}}</p>
+                        <h5 class="card-title border-bottom">{{$shoe->name}}</h5>
+                        <p class="card-text border-bottom">{{$shoe->price}}</p>
                         <a href="{{route('user.shoes.show', $shoe->id)}}" class="btn btn-success">View Product</a>
 
                     </div>
