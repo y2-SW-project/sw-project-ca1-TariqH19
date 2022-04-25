@@ -34,7 +34,7 @@
 
                         <div class="form-group">
                             <label for="location">image</label>
-                            <input type="text" class="form-control" id="image" name="image"
+                            <input type="file" class="form-control" id="image" name="image"
                                 value="{{ old('image') }}" />
                         </div>
 
