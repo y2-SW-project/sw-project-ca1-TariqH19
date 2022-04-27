@@ -81,11 +81,11 @@
             </div>
         </nav>
         <div class="container">
-            <div class="col-lg-8 ">
+            <div class="col-lg-12 ">
                 <!-- Featured blog post-->
-                <div class="card mb-4">
-                    <a href="#!"><img class="card-img-top"
-                            src="{{ URL::to('/assets/images/clothes/'.$clothing->image) }}" alt="..." /></a>
+                <div class="card m-4">
+                    <a href="#!"><img class="img-fluid" src="{{ URL::to('/assets/images/clothes/'.$clothing->image) }}"
+                            alt="..." /></a>
                     <div class="card-body">
                         <h2 class="card-title">{{ $clothing->name. ". Wow what a great choice" }}</h2>
                         <h5>Thank you for your bid. The bid is now live we will notify you if your bid is accepted by

@@ -168,6 +168,7 @@
                                                         <textarea class="form-control" id="message-text"></textarea>
                                                     </div>
                                                 </form>
+
                                             </div>
                                             <div class="modal-footer ">
                                                 <button type="button" class="btn btn-secondary"
