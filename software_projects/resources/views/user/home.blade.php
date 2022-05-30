@@ -15,7 +15,7 @@
                     @endif
 
                     You are logged in!
-                    <a href="{{route('user.shoes.index')}}">View all products</a>
+                    <a href="{{route('user.shoes.index')}}">View all shoes</a>
                 </div>
             </div>
         </div>

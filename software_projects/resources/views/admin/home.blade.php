@@ -15,7 +15,9 @@
                     @endif
 
                     You are logged in as admin user!
-                    <a href="{{route('admin.shoes.index')}}">View all shoes</a>
+                    <li><a href="{{route('admin.shoes.index')}}">View all shoes</a></li>
+                    <li><a href="{{route('admin.clothes.index')}}">View all clothes</a></li>
+
                 </div>
             </div>
         </div>
